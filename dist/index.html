@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LommaVäder</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <h1 id="title">Weather</h1>
+      <div class="input">
+        <input type="text" placeholder="Enter Location" />
+        <button type="button">search</button>
+      </div>
+      <div class="main-info">
+        <h3 id="location-name">Lomma</h3>
+        <h1 id="temp">15C</h1>
+        <h4 id="weather">Soligt</h4>
+        <span id="min-temp">Min: 15C</span>
+        <span id="max-temp">Max: 15C</span>
+      </div>
+      <div class="sub-info">
+        <div class="feels-like">
+          <h4>Feels Like:</h4>
+          <p id="feels-like">17.75C</p>
+        </div>
+        <div class="wind">
+          <h4>Wind:</h4>
+          <p id="wind">5 m/s</p>
+        </div>
+        <div class="pressure">
+          <h4>Air Pressure:</h4>
+          <p id="pressure">1013hPa</p>
+        </div>
+        <div class="humidity">
+          <h4>Humidity:</h4>
+          <p id="humidity">47%</p>
+        </div>
+      </div>
+      <div class="forecast">
+        <p id="tomorrow">Imorgon: 16C</p>
+        <p id="overtomorrow">Övermorgon: 20C</p>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
