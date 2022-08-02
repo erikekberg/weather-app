@@ -10,10 +10,13 @@ async function getCurrentWeather() {
       `http://api.openweathermap.org/data/2.5/weather?q=${loc}&APPID=586fd04639d371332e510190e8fa897c&units=metric`,
       { mode: "cors" }
     );
+    console.log(response);
     if (response.ok) {
       return await response.json();
     }
-  } catch (err) {}
+  } catch (err) {
+    throw new Error(err);
+  }
 }
 
 async function getForecast() {
@@ -38,7 +41,7 @@ async function getForecast() {
 
 searchButton.addEventListener("click", () => {
   loc = locInput.value;
-  Promise.all([getCurrentWeather(), getForecast()]).then((values) =>
-    setInfo(values[0], values[1])
-  );
+  Promise.all([getCurrentWeather(), getForecast()]).then((values) => {
+    setInfo(values[0], values[1]);
+  });
 });
